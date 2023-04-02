@@ -79,7 +79,19 @@
 		<p id="myVideo"></p>
 	<script>
 	var vid = document.getElementById("myVideo");
-    
+	var timer;
+        timer = setInterval(function() { 
+            vid.innerHTML = " 3 seconds are up "; 
+        }, 3000);
+		
+	vid.onplay = function() {
+	  timer()
+	  window.setTimeout(()=>{
+	    const vid = document.getElementById('myVideo');
+	    vid.pause()
+	  }, 15000)//6000ms = 6sec
+	}
+
 	function getCurTime() { 
   		alert(vid.currentTime);
         vid.innerHTML=vid.currentTime;
