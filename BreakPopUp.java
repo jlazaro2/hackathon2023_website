@@ -1,31 +1,53 @@
 package for_videohandler;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.Timer;
 import java.awt.*;  
 import java.awt.event.*; //imports java ActionListener
 import java.util.ArrayList;
 import java.util.Random;
 
-
+/**
+ * creates pop up when 15min marker is triggered to encourage students
+ * and reward them with star points
+ * @author ainsleesmith
+ *
+ */
 public class BreakPopUp {
-	//private Frame frame;
+	
+	/**
+	 * words of encouragement
+	 */
 	private Label wordsOfEncouragement;
+	
+	/**
+	 * star point text
+	 */
 	private Label starPoints;
-	//private Panel controlPanel;
+	
+	/**
+	 * tells if button is pressed
+	 */
 	private boolean buttonPressed;
 	
+	/**
+	 * action listener to notify is button is pressed
+	 * originaly made so that we could continue video
+	 * for students when they pressed the pop up continue button
+	 * @author ainsleesmith
+	 *
+	 */
 	private class MyActionListener implements ActionListener{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
 			buttonPressed = true;
 			System.out.println("BUTTON PRESSED BROOOO");
 		}
 	}
 	
+	/**
+	 * class constructor
+	 */
 	public BreakPopUp() {
 		this.buttonPressed = false;
 		this.wordsOfEncouragement = new Label();
@@ -33,6 +55,10 @@ public class BreakPopUp {
 		buildPopUp();
 	}
 	
+	/**
+	 * chooses randomized encouragement
+	 * @return phrase of encouragement
+	 */
 	public String chooseEncouragement() {
 		ArrayList<String> words = new ArrayList<>();
 		words.add("You got this! Drink water!");
@@ -45,19 +71,30 @@ public class BreakPopUp {
 		
 	}
 	
+	/**
+	 * builds and displays pop up
+	 */
 	public void buildPopUp() {
 		JFrame frame = new JFrame("Video Checkpoint!!!");
 	    JButton contButton = new JButton("press to continue :)");  
-	    contButton.setBounds(100,200,200,100); 
+	    contButton.setBounds(100,230,200,100); 
+	    
+	    frame.getContentPane().setBackground(Color.pink);
 	    
 	    frame.add(contButton);  
 	    frame.setSize(400,400); 
 	    wordsOfEncouragement.setText(chooseEncouragement());
 	    wordsOfEncouragement.setBounds(50, 30, 300, 100);
 	    wordsOfEncouragement.setAlignment(Label.CENTER);
+	    
+	    wordsOfEncouragement.setBackground(Color.white);
+	    
 	    starPoints.setText("You gained 5 star points!");
 	    starPoints.setBounds(100, 100, 200, 100);
 	    starPoints.setAlignment(Label.CENTER);
+	    
+	    starPoints.setBackground(Color.white);
+	    
 	    contButton.addActionListener(new MyActionListener());
 	    frame.add(wordsOfEncouragement);
 	    frame.add(starPoints);
@@ -68,17 +105,6 @@ public class BreakPopUp {
 	
 	public static void main(String[] args){
 		BreakPopUp pop = new BreakPopUp();
-		
-	}
-	
-//	//timer for 15 seconds, in reality it would be 15 min
-//	public void timeVideo(int videoLength) {
-//		int countdown = 15000;
-//		
-//		var timer = new Timer(countdown, null);
-//		
-//		timer.start();
-//	}
-	
+	}	
 	
 }
