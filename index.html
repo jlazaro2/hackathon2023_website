@@ -62,10 +62,33 @@
 	<p> </p>
 	
 	<table class = "center">
-		<video width="320" height="240" controls>
-      <source src=”http://techslides.com/demos/sample-videos/small.ogv” type=video/ogg>
-      <source src="/build/videos/arcnet.io(7-sec).mp4" type=video/mp4>
-    </video>
+		<button onclick="getCurTime()" type="button">Get current time position</button>
+		<button onclick="setCurTime()" type="button">Set time position to 5 seconds</button><br> 
+		<video id="myVideo" width="320" height="240" controls>
+      		<source src=”http://techslides.com/demos/sample-videos/small.ogv” type=video/ogg>
+      		<source src="/build/videos/arcnet.io(7-sec).mp4" type=video/mp4>
+			
+
+		<video id="myVideo" width="320" height="176" controls>
+  		<source src="mov_bbb.mp4" type="video/mp4">
+  		<source src="mov_bbb.ogg" type="video/ogg">
+		</video>
+		<p id="myVideo"></p>
+	<script>
+	var vid = document.getElementById("myVideo");
+	var timer;
+        timer = setInterval(function() { 
+            vid.innerHTML = " 3 seconds are up "; 
+        }, 3000);
+	function getCurTime() { 
+  		alert(vid.currentTime);
+	} 
+
+	function setCurTime() { 
+  		vid.currentTime=5;
+	} 
+	</script> 
+    	</video>
 	</table>
   
 
