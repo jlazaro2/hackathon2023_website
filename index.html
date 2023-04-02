@@ -22,20 +22,31 @@
   	margin: 4px 2px;
   	cursor: pointer;
 	}
-	.button1 {background-color: white; border-radius: 20px;} 
+    .title {
+  	border: none;
+  	color: white;
+  	padding: 15px 32px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+  	margin: 4px 2px;
+  	cursor: pointer;
+	}
+    .title1 {background-color: green;font-size: 75px;padding: 70px 100px;text-align: center;}
+	.button1 {background-color: white; border-radius: 20px; font-family: "Lota", sans-serif;} 
     .center {
     	margin-left: auto;
         margin-right: auto;
     }
-    h1, p {text-align: center;}
+    p {text-align: center; font-family: "Impact", sans-serif;}
    
-    body {font-family: "Lato", sans-serif;}
 	</style>
 </head>
 
 <body>
   
-  <h1> MotiVideo </h1>
+  <h1 class="title1"> MotiVideo </h1>
   <p> Live Laugh Love Learn</p>
   <p> Professors can now use MotiVideo to encourage students to watch hybrid classes and recorded lectures </p>
   <table class="center">
@@ -79,18 +90,7 @@
 		<p id="myVideo"></p>
 	<script>
 	var vid = document.getElementById("myVideo");
-	var timer;
-        timer = setInterval(function() { 
-            vid.innerHTML = " 3 seconds are up "; 
-        }, 3000);
-		
-	vid.onplaying = function() {
-	  window.setTimeout(()=>{
-	    const vid = document.getElementById('myVideo');
-	    vid.pause();
-	  }, 15300);//6000ms = 6sec
-	}
-
+    
 	function getCurTime() { 
   		alert(vid.currentTime);
         vid.innerHTML=vid.currentTime;
@@ -111,7 +111,7 @@
     </tr>
     <tr>
     <th>
-    
+    <h1>Words of Encouragement:</h1>
     <ul style="list-style-type:none;">
       <li>You guys are great!</li>
       <li>Keep up the good work!</li>
