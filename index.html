@@ -81,6 +81,11 @@
         timer = setInterval(function() { 
             vid.innerHTML = " 3 seconds are up "; 
         }, 3000);
+		
+	video.onplay = function() {
+		vid.pauseVideoIn15();
+	}
+		
 	function getCurTime() { 
   		alert(vid.currentTime);
 	} 
