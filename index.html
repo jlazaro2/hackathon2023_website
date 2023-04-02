@@ -85,10 +85,11 @@
         }, 3000);
 		
 	video.onplay = function() {
-		if (getCurTime % 15 == 0) {
-			vid.pause();
-		}
-	};
+	  window.setTimeout(()=>{
+	    const video = document.getElementById('myVideo');
+	    video.pause()
+	  }, 15000)//6000ms = 6sec
+	}
 		
 	function getCurTime() { 
   		alert(vid.currentTime);
