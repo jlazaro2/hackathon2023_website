@@ -87,10 +87,9 @@
 	vid.onplay = function() {
 	  timer();
 	  window.setTimeout(()=>{
-	    const vid = document.getElementById('myVideo');
-	    vid.pause();
+	   	const vid = document.getElementById('myVideo');
+	    vid.pause()
 	  }, 15000)//6000ms = 6sec
-	}
 		
 	function getCurTime() { 
   		alert(vid.currentTime);
