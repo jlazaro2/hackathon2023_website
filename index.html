@@ -88,6 +88,12 @@
 	function setCurTime() { 
   		vid.currentTime=0;
 	} 
+	
+	function pauseVideo() {
+		if (vid.currentTime % 15 == 0) {
+			vid.pause();
+		}
+	}
 	</script> 
     	</video>
 	</table>
