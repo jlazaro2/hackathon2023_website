@@ -84,10 +84,10 @@
             vid.innerHTML = " 3 seconds are up "; 
         }, 3000);
 		
-	video.onplay = function() {
+	vid.onplay = function() {
 	  window.setTimeout(()=>{
-	    const video = document.getElementById('myVideo');
-	    video.pause()
+	    const vid = document.getElementById('myVideo');
+	    vid.pause()
 	  }, 15000)//6000ms = 6sec
 	}
 		
