@@ -85,7 +85,9 @@
         }, 3000);
 		
 	video.onplay = function() {
-		vid.pauseVideoIn15();
+		if (vid.getCurTime % 15 == 0) {
+			vid.pause();
+		}
 	};
 		
 	function getCurTime() { 
