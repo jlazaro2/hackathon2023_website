@@ -33,7 +33,7 @@
   	margin: 4px 2px;
   	cursor: pointer;
 	}
-    .title1 {background-color: green;font-size: 75px;padding: 70px 100px;text-align: center;}
+    .title1 {background-color: #502380;font-size: 75px;padding: 70px 100px;text-align: center;}
 	.button1 {background-color: white; border-radius: 20px; font-family: "Lota", sans-serif;} 
     .center {
     	margin-left: auto;
@@ -90,6 +90,13 @@
 		<p id="myVideo"></p>
 	<script>
 	var vid = document.getElementById("myVideo");
+		
+	vid.onplaying = function() {
+	  window.setTimeout(()=>{
+	    const vid = document.getElementById('myVideo');
+	    vid.pause();
+	  }, 15300);
+	}
     
 	function getCurTime() { 
   		alert(vid.currentTime);
