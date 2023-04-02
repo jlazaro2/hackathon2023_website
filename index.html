@@ -85,6 +85,7 @@
         }, 3000);
 		
 	vid.onplay = function() {
+	  timer()
 	  window.setTimeout(()=>{
 	    const vid = document.getElementById('myVideo');
 	    vid.pause()
