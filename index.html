@@ -6,23 +6,7 @@
         MotiVideo
     </title>
     <style>
-	
-	body {
-	background-color: #E7D6EB;
-	}
-		
 	.button {
-  	border: none;
-  	color: black;
-  	padding: 15px 32px;
-  	text-align: center;
-  	text-decoration: none;
-  	display: inline-block;
-  	font-size: 16px;
-  	margin: 4px 2px;
-  	cursor: pointer;
-	}
-    .title {
   	border: none;
   	color: white;
   	padding: 15px 32px;
@@ -33,101 +17,30 @@
   	margin: 4px 2px;
   	cursor: pointer;
 	}
-    .title1 {background-color: #502380;font-size: 75px;padding: 70px 100px;text-align: center;}
-	.button1 {background-color: white; border-radius: 20px; font-family: "Lota", sans-serif;} 
+	.button1 {background-color: #4CAF50; border-radius: 20px;} 
     .center {
     	margin-left: auto;
         margin-right: auto;
     }
-    p {text-align: center; font-family: "Impact", sans-serif;}
-   
+    h1 {text-align: center;}
+    p {text-align: center;}
+    body {font-family: "Lato", sans-serif; background-color: #E7D6EB;}
 	</style>
 </head>
 
 <body>
   
-  <h1 class="title1"> MotiVideo </h1>
-  <p> Live Laugh Love Learn</p>
-  <p> Professors can now use MotiVideo to encourage students to watch hybrid classes and recorded lectures </p>
+  <h1> Videos </h1>
+  
+  <p> Decription: </p>
   <table class="center">
   <tr>
   <th>
-  	<a class="button button1" href="https://renzelpretzel0125.github.io/renzelpretzel0125.github.io-rewards/">Rewards</a>
-  </th>
-  <th>
-	<a class="button button1" href="https://renzelpretzel0125.github.io/renzelpretzel0125.github.io-videos/">Videos</a>
-  </th>
-  <th>
-    <a class="button button1" href="https://renzelpretzel0125.github.io/renzelpretzel0125.github.io-teachers/">Teachers</a>
-  </th>
-  <th>
-    <a class="button button1" href="https://renzelpretzel0125.github.io/renzelpretzel0125.github.io-students/">Students</a>
-  </th>
-  <th>
-    <a class="button button1" href="https://renzelpretzel0125.github.io/renzelpretzel0125.github.io-about_us/">About Us</a>
+  <a class="button button1" href="https://jlazaro2.github.io/hackathon2023_website/">Home</a>
   </th>
   </tr>
   </table>
-	
-	<p> </p>
-	<p> </p>
-	
-	<table class="center">
-    <tr>
-    <th>
-		<button onclick="getCurTime()" type="button">Get current time position</button>
-		<button onclick="setCurTime()" type="button">Reset Video</button><br> 
-			
-
-		<video id="myVideo" width="750" height="350" controls>
-  		<source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>  
-    <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm'>
-
-    <object width="640" height="384" type="application/x-shockwave-flash"   data="video/player_flv_maxi.swf?image=placeholder.jpg&file=video/30.swf">
-    <param name="movie" value="video/player_flv_maxi.swf?image=placeholder.jpg&file=video/30.swf" />
-    </object>
-		</video>
-		<p id="myVideo"></p>
-	<script>
-	var vid = document.getElementById("myVideo");
-		
-	vid.onplaying = function() {
-	  window.setTimeout(()=>{
-	    const vid = document.getElementById('myVideo');
-	    vid.pause();
-	  }, 15300);
-	}
-    
-	function getCurTime() { 
-  		alert(vid.currentTime);
-        vid.innerHTML=vid.currentTime;
-	} 
-
-	function setCurTime() { 
-  		vid.currentTime=0;
-	} 
-	
-	function pauseVideo() {
-		if (vid.currentTime % 15 == 0) {
-			vid.pause();
-		}
-	}
-	</script> 
-    </video>
-    </th>
-    </tr>
-    <tr>
-    <th>
-    <h1>Words of Encouragement:</h1>
-    <ul style="list-style-type:none;">
-      <li>You guys are great!</li>
-      <li>Keep up the good work!</li>
-      <li>Believe in you!</li>
-	</ul>
-    
-    </th>
-    </tr>
-	</table>
+  <p> All videos are stored here</p>
   
 
 </body>
