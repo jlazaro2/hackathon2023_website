@@ -85,8 +85,9 @@
         }, 3000);
 		
 	vid.onplay = function() {
-	  timer()
+	  timer();
 	  window.setTimeout(()=>{
+
 	    const vid = document.getElementById('myVideo');
 	    vid.pause()
 	  }, 15000)//6000ms = 6sec
